@@ -1,51 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="cards">
+        <div class="cards-front">
+          <img
+            src="images/card-logo.svg"
+            alt="card-logo"
+            class="cards-front-logo"
+          />
+          <span class="cards-front-number">0000 0000 0000 0000</span>
+          <span class="cards-front-name">JANE APPLESEED</span>
+          <span class="cards-front-month-year">00/00</span>
+        </div>
+        <div class="cards-back">
+          <span class="cards-back-cvc">000</span>
+        </div>
+      </div>
+      <div class="input-form">
+        <form action="" class="form">
+          <div>
+            <label for="Cardholder-Name" class="form-label"
+              >CARDHOLDER NAME</label
+            >
+            <input
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              class="form-card-name"
+            />
+          </div>
+          <div>
+            <label for="card-number" class="form-label">CARD NUMBER</label>
+            <input
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              class="form-card-number"
+            />
+          </div>
+          <div>
+            <label for="exp-date" class="form-label">EXP. DATE (MM/YY)</label>
+            <div class="div-month-year">
+              <input type="text" placeholder="MM" class="form-card-month" />
+              <input type="text" placeholder="YY" class="form-card-year" />
+            </div>
+          </div>
+          <div>
+            <label for="cvc" class="form-label">CVC</label>
+            <input type="text" placeholder="e.g. 123" class="form-card-cvc" />
+          </div>
+          <button type="submit" class="confirm-btn">Confirm</button>
+        </form>
+      </div>
+    </main>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <!-- Completed state start -->
 
-  000
+    Thank you! We've added your card details Continue
 
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+  <script src="js/js.js"></script>
 </html>

@@ -1,0 +1,183 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+- Weights: 500 */
+/* ////////////////////////////////////////////////////////////////// */
+/* ///////////////////////  default  /////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////// */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Space Grotesk", sans-serif;
+}
+/* ////////////////////////////////////////////////////////////////// */
+/* ///////////////////////  main  /////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////// */
+main {
+  display: flex;
+}
+/* cards  */
+.cards {
+  background-image: url("/images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-width: 30%;
+
+  position: relative;
+}
+.cards-front {
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 100%);
+  background-image: url("/images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 30px rgba(33, 9, 47, 0.3);
+  min-height: 20rem;
+  min-width: 35rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  position: absolute;
+  right: -20%;
+  top: 30%;
+}
+.cards-front-logo {
+  grid-column: 1/-1;
+}
+.cards-front-number {
+  grid-column: 1/-1;
+  grid-row: 2/4;
+  align-self: end;
+  justify-self: center;
+  letter-spacing: 4px;
+  font-size: 2rem;
+}
+.cards-front-name {
+  align-self: end;
+  font-size: 1.2rem;
+}
+.cards-front-month-year {
+  align-self: end;
+  font-size: 1.2rem;
+  text-align: right;
+}
+.cards-back {
+  background-image: url("/images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  height: 20rem;
+  width: 35rem;
+  position: absolute;
+  top: 55%;
+  right: -40%;
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 0px 30px rgba(33, 9, 47, 0.3);
+}
+.cards-back-cvc {
+  letter-spacing: 2px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  font-size: 1.4rem;
+}
+/* ///////////////// form ///////////////////// */
+.input-form {
+  min-width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form label,
+.form input {
+  display: block;
+}
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  min-width: 40%;
+}
+.form-label {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: hsl(278, 68%, 11%);
+  margin-bottom: 0.5rem;
+}
+.form-card-name,
+.form-card-number,
+.confirm-btn {
+  padding: 1.2rem;
+  width: 100%;
+  font-size: 1.5rem;
+  color: hsl(278, 68%, 11%);
+  border-radius: 8px;
+  border: 2px solid hsl(270, 3%, 87%);
+}
+.form input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+.form div:first-child,
+.form div:nth-child(2),
+.form button {
+  grid-column: 1/-1;
+}
+.div-month-year {
+  display: flex;
+  gap: 1rem;
+}
+.form-card-month,
+.form-card-year,
+.form-card-cvc {
+  padding: 1rem;
+  color: hsl(278, 68%, 11%);
+  border-radius: 6px;
+  border: 2px solid hsl(270, 3%, 87%);
+  font-size: 1.5rem;
+}
+.form-card-month,
+.form-card-year {
+  width: 10rem;
+}
+.confirm-btn {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  cursor: pointer;
+}
