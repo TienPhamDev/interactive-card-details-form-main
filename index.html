@@ -32,7 +32,7 @@
     </style>
   </head>
   <body>
-    <main>
+    <main class="main">
       <div class="cards">
         <div class="cards-front">
           <img
@@ -45,7 +45,9 @@
           <span class="cards-front-month-year">00/00</span>
         </div>
         <div class="cards-back">
-          <span class="cards-back-cvc">000</span>
+          <div class="cards-back-pos-relative">
+            <span class="cards-back-cvc">000</span>
+          </div>
         </div>
       </div>
       <div class="input-form">
@@ -79,15 +81,18 @@
             <label for="cvc" class="form-label">CVC</label>
             <input type="text" placeholder="e.g. 123" class="form-card-cvc" />
           </div>
-          <button type="submit" class="confirm-btn">Confirm</button>
+          <button type="submit" class="btn">Confirm</button>
         </form>
+        <!-- <div class="thank-you hidden">
+          <img src="images/icon-complete.svg" alt="thank you icon" />
+          <h1 class="lg-text-thank-you">THANK YOU !</h1>
+          <p class="sm-text-thank-you">We've added your card details</p>
+          <button class="btn btn-continue">Continue</button>
+        </div> -->
       </div>
+
+      <!-- Completed state start -->
     </main>
-
-    <!-- Completed state start -->
-
-    Thank you! We've added your card details Continue
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

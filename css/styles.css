@@ -43,11 +43,15 @@ html {
   font-size: 62.5%;
   font-family: "Space Grotesk", sans-serif;
 }
+
 /* ////////////////////////////////////////////////////////////////// */
 /* ///////////////////////  main  /////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////// */
-main {
+.main {
   display: flex;
+}
+.hidden {
+  display: none;
 }
 /* cards  */
 .cards {
@@ -56,7 +60,7 @@ main {
   background-size: cover;
   height: 100vh;
   min-width: 30%;
-
+  padding: 0 2rem;
   position: relative;
 }
 .cards-front {
@@ -68,14 +72,14 @@ main {
   background-size: cover;
   border-radius: 1rem;
   box-shadow: 0px 0px 30px rgba(33, 9, 47, 0.3);
-  min-height: 20rem;
-  min-width: 35rem;
+  height: 20rem;
+  width: 35rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
   position: absolute;
   right: -20%;
-  top: 30%;
+  top: 25%;
 }
 .cards-front-logo {
   grid-column: 1/-1;
@@ -105,7 +109,7 @@ main {
   height: 20rem;
   width: 35rem;
   position: absolute;
-  top: 55%;
+  top: 50%;
   right: -40%;
   color: hsl(0, 0%, 100%);
   box-shadow: 0px 0px 30px rgba(33, 9, 47, 0.3);
@@ -117,12 +121,18 @@ main {
   right: 10%;
   font-size: 1.4rem;
 }
+.cards-back-pos-relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 /* ///////////////// form ///////////////////// */
 .input-form {
   min-width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 .form label,
 .form input {
@@ -131,8 +141,9 @@ main {
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  min-width: 40%;
+  gap: 1rem;
+  max-width: 100%;
+  padding: 0 2rem;
 }
 .form-label {
   font-size: 1.5rem;
@@ -142,9 +153,9 @@ main {
 }
 .form-card-name,
 .form-card-number,
-.confirm-btn {
+.btn {
   padding: 1.2rem;
-  width: 100%;
+  min-width: 100%;
   font-size: 1.5rem;
   color: hsl(278, 68%, 11%);
   border-radius: 8px;
@@ -161,6 +172,7 @@ main {
 .div-month-year {
   display: flex;
   gap: 1rem;
+  justify-content: flex-start;
 }
 .form-card-month,
 .form-card-year,
@@ -173,11 +185,68 @@ main {
 }
 .form-card-month,
 .form-card-year {
-  width: 10rem;
+  max-width: 7rem;
 }
-.confirm-btn {
+.btn {
   color: hsl(0, 0%, 100%);
   background-color: hsl(278, 68%, 11%);
   border: none;
   cursor: pointer;
+}
+/* ////////////////////////////////////////////////////////////////// */
+/* ///////////////////////  media query /////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////// */
+@media (max-width: 1024px) {
+  .cards {
+    min-width: 40%;
+  }
+  .cards-front,
+  .cards-back {
+    right: -20%;
+  }
+}
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  .cards {
+    background-image: url("/images/bg-main-mobile.png");
+    min-width: 100%;
+    height: 30rem;
+    padding: 0 3rem;
+  }
+  .cards-front {
+    top: 50%;
+    left: 15%;
+    z-index: 9999;
+  }
+  .cards-back {
+    top: 10%;
+    left: 30%;
+  }
+  .input-form {
+    max-width: 100%;
+    height: 70vh;
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 508px) {
+  .cards-front {
+    left: 8%;
+  }
+  .cards-back {
+    left: 16%;
+  }
+}
+@media (max-width: 420px) {
+  .cards-front,
+  .cards-back {
+    width: 35rem;
+  }
+  .cards-front {
+    left: 1%;
+  }
+  .cards-back {
+    left: 3%;
+  }
 }
