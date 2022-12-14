@@ -141,8 +141,9 @@ html {
 .form {
   display: grid;
   grid-template-columns: 2fr 0.5fr;
-  gap: 1rem;
-  max-width: 40%;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  max-width: 50%;
   padding: 0 2rem;
   justify-content: center;
   align-content: center;
