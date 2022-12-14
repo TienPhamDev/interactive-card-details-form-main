@@ -140,10 +140,12 @@ html {
 }
 .form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 0.5fr;
   gap: 1rem;
-  max-width: 100%;
+  max-width: 40%;
   padding: 0 2rem;
+  justify-content: center;
+  align-content: center;
 }
 .form-label {
   font-size: 1.5rem;
@@ -168,6 +170,10 @@ html {
 .form div:nth-child(2),
 .form button {
   grid-column: 1/-1;
+}
+.form div:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 3/4;
 }
 .div-month-year {
   display: flex;
@@ -244,9 +250,9 @@ html {
     width: 35rem;
   }
   .cards-front {
-    left: 1%;
+    left: 2%;
   }
   .cards-back {
-    left: 3%;
+    left: 5%;
   }
 }
