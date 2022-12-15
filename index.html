@@ -69,6 +69,7 @@
               placeholder="e.g. 1234 5678 9123 0000"
               class="form-card-number"
             />
+            <span class="warning hidden">Wrong format, numbers only</span>
           </div>
           <div>
             <label for="exp-date" class="form-label">EXP. DATE (MM/YY)</label>
@@ -76,12 +77,14 @@
               <input type="text" placeholder="MM" class="form-card-month" />
               <input type="text" placeholder="YY" class="form-card-year" />
             </div>
+            <span class="warning hidden">Can't be blank</span>
           </div>
           <div>
             <label for="cvc" class="form-label">CVC</label>
             <input type="text" placeholder="e.g. 123" class="form-card-cvc" />
+            <span class="warning hidden">Can't be blank</span>
           </div>
-          <button type="submit" class="btn">Confirm</button>
+          <button type="submit" class="btn btn-confirm">Confirm</button>
         </form>
         <!-- <div class="thank-you hidden">
           <img src="images/icon-complete.svg" alt="thank you icon" />
