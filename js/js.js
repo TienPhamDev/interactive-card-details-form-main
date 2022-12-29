@@ -3,10 +3,12 @@
 const inputCardNameEl = document.querySelector(".form-card-name");
 const inputCardNumberEl = document.querySelector(".form-card-number");
 const inputCardMonthEl = document.querySelector(".form-card-month");
-const inputCardYearEl = document.querySelector(".form-card-yea");
+const inputCardYearEl = document.querySelector(".form-card-year");
 const confirmBtnEl = document.querySelector(".btn-confirm");
 const cardFrontNameEl = document.querySelector(".cards-front-name");
 const cardFrontNumberEl = document.querySelector(".cards-front-number");
+const cardFrontMonthEl = document.querySelector(".cards-front-month");
+const warningMonthYearEl = document.querySelector(".warning--mm-yy");
 const warningEl = document.querySelector(".warning");
 //function
 const cardNumberStrFormat = (str) =>
@@ -32,3 +34,16 @@ inputCardNumberEl.addEventListener("change", function () {
     warningEl.classList.remove("hidden");
   }
 }); // from form card number to Card Number
+inputCardMonthEl.addEventListener("change", function () {
+  if (
+    inputCardMonthEl.value.match(/[0-9]/g) &&
+    inputCardMonthEl.value.length === 2 &&
+    inputCardMonthEl.value < 12 &&
+    inputCardMonthEl.value > 0
+  ) {
+    cardFrontMonthEl.textContent = inputCardMonthEl.value;
+    warningMonthYearEl.classList.add("hidden");
+  } else {
+    warningMonthYearEl.classList.remove("hidden");
+  }
+});
